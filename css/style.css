@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background: #fff;
+  filter: url("#effect");
+  z-index: 1;
+}
+footer .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 50px);
+  transition: 1s;
+}
+footer .toggle::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scaleY(0.8) rotate(45deg);
+  border-radius: 20px;
+  transition: 1s;
+}
+footer .toggle span {
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+  color: #555;
+  margin-top: -50px;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+footer .upper {
+  height: 0vh;
+  overflow: hidden;
+  transition: 1s;
+}
+footer .lower {
+  border-top: 1px solid #ddd;
+}
+footer .lower p {
+  position: relative;
+  z-index: 2;
+  padding: 40px 10vw;
+  text-align: center;
+  font: 11px/1.2 "arial";
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+footer.on .toggle {
+  top: -70px;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 25px);
+}
+footer.on .toggle::before {
+  border-radius: 50%;
+  transform: scaleY(1) rotate(45deg);
+}
+footer.on .toggle span {
+  transform: rotate(225deg);
+  margin-top: 5px;
+  margin-left: -4px;
+}
+footer.on .upper {
+  height: 300px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+header h1 a {
+  font: bold 24px/1 "arial";
+  color: #fff;
+}
+header #gnb {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header #gnb a {
+  font: 14px/1 "arial";
+  color: #fff;
+}
+
+figure {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: #333;
+}
+
+#metro nav {
+  width: 100%;
+  padding: 20px 10vw;
+  display: flex;
+  gap: 40px;
+}
+#metro nav a {
+  color: #999;
+}
+#metro nav a.on {
+  color: #000;
+}
+#metro section {
+  display: none;
+  padding: 5px;
+}
+#metro section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#metro section article {
+  width: 25%;
+  height: 25vw;
+  padding: 5px;
+  float: left;
+}
+#metro section article .inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+}
+#metro section.on {
+  display: block;
+}
+#metro section.active article .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+#metro #news article:nth-of-type(1), #metro #news article:nth-of-type(4), #metro #news article:nth-of-type(9) {
+  width: 50%;
+}
+#metro #news article .inner {
+  background: lightblue;
+}
+#metro #flicker article:nth-of-type(3), #metro #flicker article:nth-of-type(4), #metro #flicker article:nth-of-type(9) {
+  width: 50%;
+}
+#metro #flicker article .inner {
+  background: cornflowerblue;
+}
+#metro #Youtube article:nth-of-type(2), #metro #Youtube article:nth-of-type(8) {
+  width: 50%;
+}
+#metro #Youtube article .inner {
+  background: orange;
+}
+
+#location {
+  width: 100%;
+  height: 60vh;
+  background: #111;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */

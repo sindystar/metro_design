@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="#">LEI</a></h1>
+
+    <ul id="gnb">
+      <li><a href="#">DEPARTMENT</a></li>
+      <li><a href="#">COMMINUTY</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="#">YOUTUBE</a></li>
+      <li><a href="#">LOCATION</a></li>
+      <li><a href="#">MEMBER</a></li>
+    </ul>
+  </header>
+
+  <figure></figure>
+
+  <main id="metro">
+    <nav>
+      <a href="#" class="on ">News</a>
+      <a href="#">Flicker</a>
+      <a href="#">Youtube</a>
+    </nav>
+
+    <section id="news" class="on active">
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+    </section>
+
+    <section id="flicker">
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+    </section>
+
+    <section id="Youtube">
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+      <article>
+        <div class="inner"></div>
+      </article>
+    </section>
+  </main>
+  <!-- 세로 마진 시 마짐겹침 증상 생길수 있어 inner 패딩으로  -->
+
+
+  <aside id="location"></aside>
+
+  <footer>
+    <a href="#" class="toggle"><span>+</span></a>
+    <section class="upper"></section>
+    <section class="lower">
+      <p>2023 LEI Design Lab &copy; All Right Reserved.</p>
+    </section>
+
+  </footer>
+
+  <svg>
+    <defs>
+      <filter id="effect">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="alpha" />
+        <feBlend in="SourceGraphic" in2="alpha" />
+      </filter>
+    </defs>
+  </svg>
+
+</body>
+
+</html>
