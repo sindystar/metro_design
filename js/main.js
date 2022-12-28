@@ -1,6 +1,8 @@
 const btnMetro = document.querySelectorAll('#metro nav a');
 const boxMetro = document.querySelectorAll('#metro section');
 const btnFooter = document.querySelector('footer .toggle');
+const mapFrame = document.querySelector('#location');
+const mapInfo = mapFrame.querySelector('.mapInfo');
 
 //메트로 탭메뉴 토글 버튼
 btnMetro.forEach((btn,idx)=> {
@@ -45,3 +47,12 @@ const marker = new kakao.maps.Marker({
 	position: mapOption.center,
 });
 marker.setMap(map);
+
+
+//mapInfo 패널 이벤트 연결
+mapInfo.addEventListener('click', ()=> {
+  mapInfo.classList.add('off');
+});
+mapFrame.addEventListener('mouseleave',()=>{
+  mapInfo.classList.remove('off')
+});
