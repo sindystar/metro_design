@@ -48,11 +48,19 @@ const marker = new kakao.maps.Marker({
 });
 marker.setMap(map);
 
+//지도 줌기능 비활성화 (휠이벤트)
+map.setZoomable(false);
 
-//mapInfo 패널 이벤트 연결
-mapInfo.addEventListener('click', ()=> {
-  mapInfo.classList.add('off');
+//mapInfo패널 이벤트 연결
+mapInfo.addEventListener('click', () => {
+	mapInfo.classList.add('off');
+	map.setCenter(mapOption.center);
 });
-mapFrame.addEventListener('mouseleave',()=>{
-  mapInfo.classList.remove('off')
+mapFrame.addEventListener('mouseleave', () => {
+	mapInfo.classList.remove('off');
+});
+
+//브라우저 리사이즈시 지도 항상 가운데 유지
+window.addEventListener('resize', () => {
+	map.setCenter(mapOption.center);
 });
